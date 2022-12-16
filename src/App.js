@@ -1,24 +1,20 @@
-import logo from './logo.svg';
+import AuthScreen from './Authority/Authority'
+//import WeatherPage from './WeatherPage/WeatherPage'
+import Preload from './Preload/Preload'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import React, {Suspense, } from 'react';
 import './App.css';
+const WeatherPage = React.lazy(() => import('./WeatherPage/WeatherPage'));
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+        <Routes>
+          <Route  index element={<AuthScreen />}/>
+          <Route path="/dashboard" element={<Suspense fallback={<Preload />}><WeatherPage /></Suspense>}/>
+        </Routes>
+      </BrowserRouter>
   );
 }
 

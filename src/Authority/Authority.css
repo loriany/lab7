@@ -1,0 +1,46 @@
+.Authority {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    width: 100%;
+    height: auto;
+    /* background: linear-gradient(270deg, #89e9fe 10%, #f8fb5e 100%);*/
+}
+
+.Authority > div {
+    width: 100%;
+    max-width: 300px;
+    padding: 0 20px;
+}
+
+.Authority h1 {
+    color: #fff;
+    text-align: center;
+}
+
+.Authority input {
+    margin-bottom: 20px;
+}
+
+.input-error{
+    border-color: red;
+}
+
+.Authority button {
+    width: 100%;
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.AuthorityForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
